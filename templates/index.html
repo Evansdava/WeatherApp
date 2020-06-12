@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Enter Your Info
+{% endblock %}
+
+{% block content %}
+    <div class="row mt-5">
+        <h1>Enter Location</h1>
+    </div>
+    <div class="row mt-3">
+        <form action="/weather">
+            <div class="form-group">
+                <label for="name">City Name</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="form-group">
+                <label for="state">State Code (If in the US. Ex. CA, AL, NM)</label>
+                <input type="text" name="state" id="state">
+            </div>
+            <div class="form-group">
+                <label for="country">Country (Use ISO 3166 code. Ex. US, UK, JP)</label>
+                <input type="text" name="country" id="country">
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}

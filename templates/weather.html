@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Weather for {{city}}{% endblock %}
+
+{% block content %}
+    <div class="row mt-5">
+        {% if city == None %}
+            <h1>Error: City not found</h1>
+        {% else %}
+            <h1>{{city}}</h1>
+
+            <h2>{{temp.temp}}</h2>
+
+            <h3>{{weather.main}}</h3>
+            <p>{{weather.description}}</p>
+        {% endif %}
+    </div>
+    {% if mood %}
+        <h2>Current Mood: {{mood}}</h2>
+    {% endif %}
+    <div class="row mt-3">
+        <form action="#">
+            <div class="form-group">
+                <label for="mood">Enter Your Mood</label>
+                <input type="text" name="mood" id="mood">
+            </div>
+            <input type="hidden" name="city" id="city" value="{{city}}">
+            <input type="hidden" name="state" id="state" value="{{state}}">
+            <input type="hidden" name="country" id="country" value="{{country}}">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+{% endblock %}
