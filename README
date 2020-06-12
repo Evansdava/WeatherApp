@@ -1,0 +1,16 @@
+# README
+
+## How to install
+
+---
+
+Run the command `pip3 install -r requirements.txt`
+
+<br>
+
+## How to use
+---
+1. In the terminal, run the command `flask run`
+2. Open a web browser and navigate to http://127.0.0.1:5000/
+3. Enter the information for the location you want the weather of
+4. View the weather and enter your mood
